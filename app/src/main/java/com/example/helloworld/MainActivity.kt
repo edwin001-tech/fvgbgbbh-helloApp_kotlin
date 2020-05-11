@@ -7,6 +7,7 @@ import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import android.widget.Toast
 
 import kotlinx.android.synthetic.main.activity_main.*
@@ -24,7 +25,7 @@ class MainActivity : AppCompatActivity() {
 
         }
     //Adding message code to the onCreate function
-    Toast.makeText(this, "Hi, from Edwin?",
+    Toast.makeText(this, "Hi, from Edwin!",
         Toast.LENGTH_SHORT).show()
 
     Log.i("info", "Done creating the app")
@@ -44,5 +45,19 @@ class MainActivity : AppCompatActivity() {
             R.id.action_settings -> true
             else -> super.onOptionsItemSelected(item)
         }
+    }
+
+    fun topClick(v: View) {
+        Toast.makeText(this, "Top button clicked",
+            Toast.LENGTH_SHORT).show()
+
+        Log.i("info", "The user clicked the top button")
+    }
+
+    fun bottomClick(v: View) {
+        Toast.makeText(this, "Bottom button clicked",
+            Toast.LENGTH_SHORT).show()
+
+        Log.i("info", "The user clicked the bottom button")
     }
 }
